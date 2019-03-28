@@ -1,0 +1,23 @@
+﻿<Window x:Class="Chapter2IfElsePractice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chapter2IfElsePractice"
+        mc:Ignorable="d"
+        Title="MainWindow" Background="White" UseLayoutRounding="False" Height="234.118" Width="508.394">
+    <Grid Height="150" Width="450" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="changeText" Content="Change the label if checked" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ChangeText_Click"/>
+        <CheckBox x:Name="enableCheckbox" Content="Enable label changing" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="labelToChange" HorizontalAlignment="Left" Margin="118,38,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Press the button to set my text" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="221"/>
+
+    </Grid>
+</Window>

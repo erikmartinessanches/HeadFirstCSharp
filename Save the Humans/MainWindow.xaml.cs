@@ -117,33 +117,6 @@ namespace Save_the_Humans
             storyboard.Begin();
         }
 
-        //private void Human_MouseDown(object sender, MouseButtonEventArgs e)
-        //{
-        //    if (enemyTimer.IsEnabled)
-        //    {
-        //        humanCaptured = true;
-        //        human.IsHitTestVisible = false;
-        //    }
-        //}
-
-        //private void Human_MouseEnter(object sender, MouseEventArgs e)
-        //{
-        //    if (targetTimer.IsEnabled && humanCaptured)
-        //    {
-        //        progressBar.Value = 0;
-        //        Canvas.SetLeft(target, random.Next(100, 
-        //            (int)playArea.ActualWidth-100));
-        //        Canvas.SetTop(target, random.Next(100,
-        //            (int)playArea.ActualHeight-100));
-        //        Canvas.SetLeft(human, random.Next(100, 
-        //            (int)playArea.ActualWidth-100));
-        //        Canvas.SetTop(human, random.Next(100,
-        //            (int)playArea.ActualHeight-100));
-        //        humanCaptured = false;
-        //        human.IsHitTestVisible = true;
-        //    }
-        //}
-
         private void PlayArea_MouseMove(object sender, MouseEventArgs e)
         {
             if (humanCaptured)
@@ -176,7 +149,8 @@ namespace Save_the_Humans
             }
         }
 
-        private void Human_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Human_MouseLeftButtonDown(object sender, 
+            MouseButtonEventArgs e)
         {
             if (enemyTimer.IsEnabled)
             {
