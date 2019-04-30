@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2Example3", "Chapter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2_AnimatingWinFormsApps", "Chapter2_AnimatingWinFormsApps\Chapter2_AnimatingWinFormsApps.csproj", "{4794B69E-1B70-455E-A091-474D8061B87F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3_example1", "Chapter3_example1\Chapter3_example1.csproj", "{AAFB9607-8FC9-44B6-BE09-3DCC8825E123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3_Guys", "Chapter3_Guys\Chapter3_Guys.csproj", "{A246AE16-25CD-4FBC-AD2C-FDFE91435F3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{4794B69E-1B70-455E-A091-474D8061B87F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4794B69E-1B70-455E-A091-474D8061B87F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4794B69E-1B70-455E-A091-474D8061B87F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAFB9607-8FC9-44B6-BE09-3DCC8825E123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAFB9607-8FC9-44B6-BE09-3DCC8825E123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAFB9607-8FC9-44B6-BE09-3DCC8825E123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAFB9607-8FC9-44B6-BE09-3DCC8825E123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A246AE16-25CD-4FBC-AD2C-FDFE91435F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A246AE16-25CD-4FBC-AD2C-FDFE91435F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A246AE16-25CD-4FBC-AD2C-FDFE91435F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A246AE16-25CD-4FBC-AD2C-FDFE91435F3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
