@@ -57,14 +57,38 @@ namespace Racetrack_Simulator
             }
         }
 
-        private void joeRadioButton_CheckedChanged(object sender, EventArgs e) 
-            => nameLabel.Text = "Joe";
+        private void joeRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            nameLabel.Text = "Joe";
+            if (GuyArray[0].MyBet != null && GuyArray[0].MyBet.Amount != 0 && 
+                GuyArray[0].MyBet.Dog != 0)
+            {
+                BetAmountNumericUpDown.Value = GuyArray[0].MyBet.Amount;
+                DogNumberNumericUpDown.Value = GuyArray[0].MyBet.Dog;
+            }
+        }
 
-        private void bobRadioButton_CheckedChanged(object sender, EventArgs e) 
-            => nameLabel.Text = "Bob";
+        private void bobRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            nameLabel.Text = "Bob";
+            if (GuyArray[1].MyBet != null && GuyArray[1].MyBet.Amount != 0 && 
+                GuyArray[1].MyBet.Dog != 0)
+            {
+                BetAmountNumericUpDown.Value = GuyArray[1].MyBet.Amount;
+                DogNumberNumericUpDown.Value = GuyArray[1].MyBet.Dog;
+            }
+        }
 
-        private void alRadioButton_CheckedChanged(object sender, EventArgs e) 
-            => nameLabel.Text = "Al";
+        private void alRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            nameLabel.Text = "Al";
+            if (GuyArray[2].MyBet != null && GuyArray[2].MyBet.Amount != 0 && 
+                GuyArray[2].MyBet.Dog != 0)
+            {
+                BetAmountNumericUpDown.Value = GuyArray[2].MyBet.Amount;
+                DogNumberNumericUpDown.Value = GuyArray[2].MyBet.Dog;
+            }
+        }
 
         private void betsButton_Click(object sender, EventArgs e)
         {
