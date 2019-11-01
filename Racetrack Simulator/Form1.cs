@@ -1,28 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Racetrack_Simulator
 {
     public partial class Form1 : Form
     {
-        Greyhound[] GreyhoundArray = new Greyhound[4];
-        Guy[] GuyArray = new Guy[3];
+        Greyhound[] GreyhoundArray;
+        Guy[] GuyArray;
         Random MyRandomizer;
 
         public Form1()
         {
             InitializeComponent();
             MyRandomizer = new Random();
+            GreyhoundArray = new Greyhound[4];
+            GuyArray = new Guy[3];
             PrepareHoundsAndGuys();
-            minimumBetLabel.Text = "Minimum bet: " +
-                BetAmountNumericUpDown.Minimum + " bucks.";
+            minimumBetLabel.Text = $"Minimum bet: " +
+                $"{BetAmountNumericUpDown.Minimum:c}.";
+            label2.Text = $"{NumberFormatInfo.CurrentInfo.CurrencySymbol}" +
+                $" on hound number ";
+
+            /*´In order to make the hounds transparent, set the "Back Color"
+             * of the parent container to Transparent. PictureBox doesn't have
+             * a Parent property, therefore I set it: */
+            Dog1PictureBox.Parent = TrackPictureBox;
+            Dog2PictureBox.Parent = TrackPictureBox;
+            Dog3PictureBox.Parent = TrackPictureBox;
+            Dog4PictureBox.Parent = TrackPictureBox;
+
         }
 
         private void PrepareHoundsAndGuys()
@@ -39,74 +46,42 @@ namespace Racetrack_Simulator
             GreyhoundArray[3] = new Greyhound(Dog4PictureBox,
                 Dog4PictureBox.Left, TrackPictureBox.Width - 
                 Dog4PictureBox.Width, MyRandomizer);
+
             GuyArray[0] = new Guy("Joe", 50, joeRadioButton, joeBetLabel);
-            GuyArray[0].ClearBet();
-            GuyArray[0].UpdateLabels();
             GuyArray[1] = new Guy("Bob", 75, bobRadioButton, bobBetLabel);
-            GuyArray[1].ClearBet();
-            GuyArray[1].UpdateLabels();
             GuyArray[2] = new Guy("Al", 45, alRadioButton, alBetLabel);
-            GuyArray[2].ClearBet();
-            GuyArray[2].UpdateLabels();
+
+            foreach (Guy guy in GuyArray)
+            {
+                guy.UpdateLabels();
+            }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
+        private void joeRadioButton_CheckedChanged(object sender, EventArgs e) 
+            => nameLabel.Text = "Joe";
 
-        }
+        private void bobRadioButton_CheckedChanged(object sender, EventArgs e) 
+            => nameLabel.Text = "Bob";
 
-        private void joeRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            //joeRadioButton.Checked = true;
-            nameLabel.Text = "Joe";
-            //if (GuyArray[0].MyBet != null && GuyArray[0].MyBet.Amount != 0 && GuyArray[0].MyBet.Dog != 0)
-            //{
-            //    BetAmountNumericUpDown.Value = GuyArray[0].MyBet.Amount;
-            //    DogNumberNumericUpDown.Value = GuyArray[0].MyBet.Dog;
-            //}
-            
-        }
-        private void bobRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            //bobRadioButton.Checked = true;
-            nameLabel.Text = "Bob";
-            //if (GuyArray[1].MyBet != null && GuyArray[1].MyBet.Amount != 0 && GuyArray[1].MyBet.Dog != 0)
-            //{
-            //    BetAmountNumericUpDown.Value = GuyArray[1].MyBet.Amount;
-            //    DogNumberNumericUpDown.Value = GuyArray[1].MyBet.Dog;
-            //}
-        }
-
-        private void alRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            //alRadioButton.Checked = true;
-            nameLabel.Text = "Al";
-            //if (GuyArray[2].MyBet != null && GuyArray[2].MyBet.Amount != 0 && GuyArray[2].MyBet.Dog != 0)
-            //{
-            //    BetAmountNumericUpDown.Value = GuyArray[2].MyBet.Amount;
-            //    DogNumberNumericUpDown.Value = GuyArray[2].MyBet.Dog;
-            //}
-        }
+        private void alRadioButton_CheckedChanged(object sender, EventArgs e) 
+            => nameLabel.Text = "Al";
 
         private void betsButton_Click(object sender, EventArgs e)
         {
             if (joeRadioButton.Checked)
             {
-                GuyArray[0].PlaceBet(BetAmountNumericUpDown.Value, 
-                    (int)DogNumberNumericUpDown.Value);
-                GuyArray[0].UpdateLabels();
+                if(GuyArray[0].PlaceBet(BetAmountNumericUpDown.Value, (int)DogNumberNumericUpDown.Value))
+                    GuyArray[0].UpdateLabels();
             }
             else if (bobRadioButton.Checked)
             {
-                GuyArray[1].PlaceBet(BetAmountNumericUpDown.Value,
-                    (int)DogNumberNumericUpDown.Value);
-                GuyArray[1].UpdateLabels();
+                if(GuyArray[1].PlaceBet(BetAmountNumericUpDown.Value, (int)DogNumberNumericUpDown.Value))
+                    GuyArray[1].UpdateLabels();
             }
             else if (alRadioButton.Checked)
             {
-                GuyArray[2].PlaceBet(BetAmountNumericUpDown.Value,
-                    (int)DogNumberNumericUpDown.Value);
-                GuyArray[2].UpdateLabels();
+                if(GuyArray[2].PlaceBet(BetAmountNumericUpDown.Value, (int)DogNumberNumericUpDown.Value))
+                    GuyArray[2].UpdateLabels();
             }
         }
 
@@ -117,6 +92,7 @@ namespace Racetrack_Simulator
                 GreyhoundArray[i].TakeStartingPosition();
             }
             timer1.Start();
+            bettingParlorGroup.Enabled = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -127,11 +103,21 @@ namespace Racetrack_Simulator
                 {
                     timer1.Stop();
                     int winner = i + 1;
-                    MessageBox.Show("Hound number " + winner + " won the race!",
-                        "We have a winner!");
-                    GuyArray[0].Collect(winner);
-                    GuyArray[1].Collect(winner);
-                    GuyArray[2].Collect(winner);
+                    MessageBox.Show("Hound number " + winner + 
+                        " won the race!", "We have a winner!");
+                    foreach (Guy guy in GuyArray)
+                    {
+                        guy.Collect(winner);
+                        guy.ClearBet();
+                        guy.UpdateLabels();
+                    }
+                    bettingParlorGroup.Enabled = true;
+                    foreach (Greyhound hound in GreyhoundArray)
+                    {
+                        hound.TakeStartingPosition();
+                    }
+                    break; //Prevent more than one winner
+                    
                 }
             }
         }

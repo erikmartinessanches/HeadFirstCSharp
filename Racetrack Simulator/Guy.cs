@@ -22,7 +22,6 @@ namespace Racetrack_Simulator
             Cash = cash;
             MyRadioButton = myRadioButton;
             MyLabel = myLabel;
-            
         }
 
         /// <summary>
@@ -37,13 +36,23 @@ namespace Racetrack_Simulator
             {
                 MyLabel.Text = Name + " hasn't placed a bet.";
             }
-            
-            MyRadioButton.Text = Name + " has " + Cash + " bucks.";
+
+            MyRadioButton.Text = string.Format("{0:s} has {1:c}.", Name, Cash);
+            //Name + " has " + Cash + " bucks.";
         }
+
         public bool PlaceBet(decimal BetAmount, int DogToWin) {
-            MyBet = new Bet(BetAmount, DogToWin, this);
-            return (BetAmount >= Cash) ? true : false;
+            if (Cash >= BetAmount)
+            {
+                MyBet = new Bet(BetAmount, DogToWin, this);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+
         public void ClearBet()
         {
             //Bet tb = MyBet;
@@ -51,13 +60,17 @@ namespace Racetrack_Simulator
             if (MyBet == null) {
                 
             } else {
-                MyBet.Amount = 0;
+                MyBet = null;
             }
         }
 
         public void Collect(int Winner)
         {
-            Cash += MyBet.PayOut(Winner);
+            if (MyBet != null)
+            {
+                Cash += MyBet.PayOut(Winner);
+            }
+            
             ClearBet();
             UpdateLabels();
         }

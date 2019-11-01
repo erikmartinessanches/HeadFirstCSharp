@@ -9,43 +9,7 @@ namespace Racetrack_Simulator
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
-
-
-
-        //{ MyPictureBox = Dog1PictureBox,
-        //            StartingPosition = TrackPictureBox.Left, RacetrackLength =
-        //            TrackPictureBox.Width - TrackPictureBox.Width, Randomizer
-        //            = MyRandomizer
-        //        new Greyhound() {MyPictureBox = Dog2PictureBox,
-        //            StartingPosition = Dog2PictureBox.Left, RacetrackLength =
-        //            racetrackPictureBox.Width - Dog1PictureBox.Width, Randomizer
-        //            = MyRandomizer},
-        //        new Greyhound() {MyPictureBox = Dog3PictureBox,
-        //            StartingPosition = Dog2PictureBox.Left, RacetrackLength =
-        //            racetrackPictureBox.Width - Dog3PictureBox.Width, Randomizer
-        //            = MyRandomizer},
-        //        new Greyhound() {MyPictureBox = Dog4PictureBox,
-        //            StartingPosition = Dog3PictureBox.Left, RacetrackLength =
-        //            racetrackPictureBox.Width - Dog4PictureBox.Width, Randomizer
-        //            = MyRandomizer}
-        //    };
-
-        //Guy[] GuyArray =
-        //{
-        //        new Guy("Joe", 50, joeRadioButton, joeBetLabel);
-        ////{Name = "Joe", Cash = 50, MyRadioButton = , MyLabel = },
-        //        //new Guy(){Name = "Bob", Cash = 75, MyRadioButton = , MyLabel = },
-        //        //new Guy(){Name = "Al", Cash = 45, MyRadioButton = , MyLabel = }
-        //    };
-
-
-
-
-
-
-
-
+        
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -71,7 +35,7 @@ namespace Racetrack_Simulator
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TrackPictureBox = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bettingParlorGroup = new System.Windows.Forms.GroupBox();
             this.RaceButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.DogNumberNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -92,7 +56,7 @@ namespace Racetrack_Simulator
             this.Dog3PictureBox = new System.Windows.Forms.PictureBox();
             this.Dog4PictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.TrackPictureBox)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.bettingParlorGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DogNumberNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BetAmountNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dog1PictureBox)).BeginInit();
@@ -103,6 +67,7 @@ namespace Racetrack_Simulator
             // 
             // timer1
             // 
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // TrackPictureBox
@@ -115,29 +80,29 @@ namespace Racetrack_Simulator
             this.TrackPictureBox.TabIndex = 0;
             this.TrackPictureBox.TabStop = false;
             // 
-            // groupBox1
+            // bettingParlorGroup
             // 
-            this.groupBox1.Controls.Add(this.RaceButton);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.DogNumberNumericUpDown);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.BetAmountNumericUpDown);
-            this.groupBox1.Controls.Add(this.betsButton);
-            this.groupBox1.Controls.Add(this.nameLabel);
-            this.groupBox1.Controls.Add(this.alBetLabel);
-            this.groupBox1.Controls.Add(this.bobBetLabel);
-            this.groupBox1.Controls.Add(this.joeBetLabel);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.alRadioButton);
-            this.groupBox1.Controls.Add(this.bobRadioButton);
-            this.groupBox1.Controls.Add(this.joeRadioButton);
-            this.groupBox1.Controls.Add(this.minimumBetLabel);
-            this.groupBox1.Location = new System.Drawing.Point(13, 421);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1187, 219);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Betting parlor";
+            this.bettingParlorGroup.Controls.Add(this.RaceButton);
+            this.bettingParlorGroup.Controls.Add(this.label3);
+            this.bettingParlorGroup.Controls.Add(this.DogNumberNumericUpDown);
+            this.bettingParlorGroup.Controls.Add(this.label2);
+            this.bettingParlorGroup.Controls.Add(this.BetAmountNumericUpDown);
+            this.bettingParlorGroup.Controls.Add(this.betsButton);
+            this.bettingParlorGroup.Controls.Add(this.nameLabel);
+            this.bettingParlorGroup.Controls.Add(this.alBetLabel);
+            this.bettingParlorGroup.Controls.Add(this.bobBetLabel);
+            this.bettingParlorGroup.Controls.Add(this.joeBetLabel);
+            this.bettingParlorGroup.Controls.Add(this.label1);
+            this.bettingParlorGroup.Controls.Add(this.alRadioButton);
+            this.bettingParlorGroup.Controls.Add(this.bobRadioButton);
+            this.bettingParlorGroup.Controls.Add(this.joeRadioButton);
+            this.bettingParlorGroup.Controls.Add(this.minimumBetLabel);
+            this.bettingParlorGroup.Location = new System.Drawing.Point(13, 421);
+            this.bettingParlorGroup.Name = "bettingParlorGroup";
+            this.bettingParlorGroup.Size = new System.Drawing.Size(1187, 219);
+            this.bettingParlorGroup.TabIndex = 1;
+            this.bettingParlorGroup.TabStop = false;
+            this.bettingParlorGroup.Text = "Betting parlor";
             // 
             // RaceButton
             // 
@@ -152,12 +117,11 @@ namespace Racetrack_Simulator
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(660, 178);
+            this.label3.Location = new System.Drawing.Point(659, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 25);
             this.label3.TabIndex = 13;
             this.label3.Text = ".";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // DogNumberNumericUpDown
             // 
@@ -314,8 +278,10 @@ namespace Racetrack_Simulator
             // 
             // Dog1PictureBox
             // 
+            this.Dog1PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.Dog1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Dog1PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Dog1PictureBox.Image")));
-            this.Dog1PictureBox.Location = new System.Drawing.Point(25, 27);
+            this.Dog1PictureBox.Location = new System.Drawing.Point(25, 39);
             this.Dog1PictureBox.Name = "Dog1PictureBox";
             this.Dog1PictureBox.Size = new System.Drawing.Size(120, 36);
             this.Dog1PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -324,8 +290,10 @@ namespace Racetrack_Simulator
             // 
             // Dog2PictureBox
             // 
+            this.Dog2PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.Dog2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Dog2PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Dog2PictureBox.Image")));
-            this.Dog2PictureBox.Location = new System.Drawing.Point(25, 125);
+            this.Dog2PictureBox.Location = new System.Drawing.Point(25, 132);
             this.Dog2PictureBox.Name = "Dog2PictureBox";
             this.Dog2PictureBox.Size = new System.Drawing.Size(120, 36);
             this.Dog2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -334,8 +302,9 @@ namespace Racetrack_Simulator
             // 
             // Dog3PictureBox
             // 
+            this.Dog3PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.Dog3PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Dog3PictureBox.Image")));
-            this.Dog3PictureBox.Location = new System.Drawing.Point(25, 242);
+            this.Dog3PictureBox.Location = new System.Drawing.Point(25, 240);
             this.Dog3PictureBox.Name = "Dog3PictureBox";
             this.Dog3PictureBox.Size = new System.Drawing.Size(120, 36);
             this.Dog3PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -344,8 +313,9 @@ namespace Racetrack_Simulator
             // 
             // Dog4PictureBox
             // 
+            this.Dog4PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.Dog4PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Dog4PictureBox.Image")));
-            this.Dog4PictureBox.Location = new System.Drawing.Point(25, 342);
+            this.Dog4PictureBox.Location = new System.Drawing.Point(25, 343);
             this.Dog4PictureBox.Name = "Dog4PictureBox";
             this.Dog4PictureBox.Size = new System.Drawing.Size(120, 36);
             this.Dog4PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -361,7 +331,7 @@ namespace Racetrack_Simulator
             this.Controls.Add(this.Dog3PictureBox);
             this.Controls.Add(this.Dog2PictureBox);
             this.Controls.Add(this.Dog1PictureBox);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.bettingParlorGroup);
             this.Controls.Add(this.TrackPictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -369,8 +339,8 @@ namespace Racetrack_Simulator
             this.Name = "Form1";
             this.Text = "A day at the races";
             ((System.ComponentModel.ISupportInitialize)(this.TrackPictureBox)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.bettingParlorGroup.ResumeLayout(false);
+            this.bettingParlorGroup.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DogNumberNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BetAmountNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dog1PictureBox)).EndInit();
@@ -385,7 +355,7 @@ namespace Racetrack_Simulator
 
         private Timer timer1;
         private PictureBox TrackPictureBox;
-        private GroupBox groupBox1;
+        private GroupBox bettingParlorGroup;
         private RadioButton joeRadioButton;
         private Label minimumBetLabel;
         private Label alBetLabel;

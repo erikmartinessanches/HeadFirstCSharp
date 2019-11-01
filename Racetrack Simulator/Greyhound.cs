@@ -9,12 +9,12 @@ namespace Racetrack_Simulator
 {
     public class Greyhound
     {
-        public int StartingPosition;  //Where MyPictureBox starts.
-        public int RacetrackLength; 
-        public PictureBox MyPictureBox = null;
-        public int Location = 0; //My location on the track
-        public Random Randomizer; //Should this not be static if each Greyhound's
-        //Randomizer reference should point to the same Random object?
+        public int StartingPosition { get; set; }  //Where MyPictureBox starts.
+        public int RacetrackLength { get; set; }
+        public PictureBox MyPictureBox { get; set; } = null;
+        public int Location { get; set; } = 0; //My location on the track
+        public Random Randomizer; //Each Greyhound's Randomizer reference
+        //should point to the same Random object.
 
         public Greyhound(PictureBox pictureBox, int startingPosition, 
             int racetrackLength, Random randomizer)
@@ -29,7 +29,7 @@ namespace Racetrack_Simulator
         {
             Location += Randomizer.Next(1, 5);
             MyPictureBox.Left = StartingPosition + Location;
-            return Location.Equals(RacetrackLength) ? true : false;
+            return (Location >= RacetrackLength) ? true : false;
         }
 
         public void TakeStartingPosition()
