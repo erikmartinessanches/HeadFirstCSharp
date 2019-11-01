@@ -94,17 +94,20 @@ namespace Racetrack_Simulator
         {
             if (joeRadioButton.Checked)
             {
-                if(GuyArray[0].PlaceBet(BetAmountNumericUpDown.Value, (int)DogNumberNumericUpDown.Value))
+                if(GuyArray[0].PlaceBet(BetAmountNumericUpDown.Value, 
+                    (int)DogNumberNumericUpDown.Value))
                     GuyArray[0].UpdateLabels();
             }
             else if (bobRadioButton.Checked)
             {
-                if(GuyArray[1].PlaceBet(BetAmountNumericUpDown.Value, (int)DogNumberNumericUpDown.Value))
+                if(GuyArray[1].PlaceBet(BetAmountNumericUpDown.Value, 
+                    (int)DogNumberNumericUpDown.Value))
                     GuyArray[1].UpdateLabels();
             }
             else if (alRadioButton.Checked)
             {
-                if(GuyArray[2].PlaceBet(BetAmountNumericUpDown.Value, (int)DogNumberNumericUpDown.Value))
+                if(GuyArray[2].PlaceBet(BetAmountNumericUpDown.Value, 
+                    (int)DogNumberNumericUpDown.Value))
                     GuyArray[2].UpdateLabels();
             }
         }

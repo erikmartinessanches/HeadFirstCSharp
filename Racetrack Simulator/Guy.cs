@@ -24,10 +24,6 @@ namespace Racetrack_Simulator
             MyLabel = myLabel;
         }
 
-        /// <summary>
-        /// Set MyLabel to MyBet's description and the label on MyRadioButton
-        /// to show my cash "Joe has 32 bucks.".
-        /// </summary>
         public void UpdateLabels() {
             if (MyBet != null)
             {
@@ -36,9 +32,7 @@ namespace Racetrack_Simulator
             {
                 MyLabel.Text = Name + " hasn't placed a bet.";
             }
-
             MyRadioButton.Text = string.Format("{0:s} has {1:c}.", Name, Cash);
-            //Name + " has " + Cash + " bucks.";
         }
 
         public bool PlaceBet(decimal BetAmount, int DogToWin) {
@@ -55,8 +49,6 @@ namespace Racetrack_Simulator
 
         public void ClearBet()
         {
-            //Bet tb = MyBet;
-            //decimal td = (decimal)tb?.Amount;
             if (MyBet == null) {
                 
             } else {
@@ -70,7 +62,6 @@ namespace Racetrack_Simulator
             {
                 Cash += MyBet.PayOut(Winner);
             }
-            
             ClearBet();
             UpdateLabels();
         }
