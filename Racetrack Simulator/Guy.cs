@@ -49,8 +49,8 @@ namespace Racetrack_Simulator
 
         public void ClearBet()
         {
-            if (MyBet == null) {
-                
+            if (MyBet == null)
+            {    
             } else {
                 MyBet = null;
             }

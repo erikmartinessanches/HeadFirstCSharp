@@ -44,13 +44,14 @@
             // listBox1
             // 
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 85;
+            this.listBox1.ItemHeight = 61;
             this.listBox1.Location = new System.Drawing.Point(0, 0);
+            this.listBox1.MaximumSize = new System.Drawing.Size(976, 200);
             this.listBox1.MultiColumn = true;
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(1204, 227);
+            this.listBox1.Size = new System.Drawing.Size(946, 200);
             this.listBox1.TabIndex = 0;
             this.listBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox1_KeyDown);
             // 
@@ -70,9 +71,9 @@
             this.accuracyLabel,
             this.toolStripStatusLabel1,
             this.difficultyProgressBar});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 190);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 188);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1204, 37);
+            this.statusStrip1.Size = new System.Drawing.Size(946, 37);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
@@ -104,7 +105,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(296, 32);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(242, 32);
             this.toolStripStatusLabel1.Spring = true;
             this.toolStripStatusLabel1.Text = "Difficulty";
             this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -119,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 227);
+            this.ClientSize = new System.Drawing.Size(946, 225);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -127,7 +128,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Hit the keys!";
+            this.Text = "Hit the keys in time!";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
