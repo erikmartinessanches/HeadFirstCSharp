@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Save the Humans", "Save the Humans\Save the Humans.csproj", "{35346F09-1D95-4FE3-871F-8EE0E2ECA4E9}"
 EndProject
@@ -35,6 +35,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typing Game", "Typing Game\Typing Game.csproj", "{3156985F-20A1-47AB-B7D8-DD28C72866D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Racetrack Simulator", "Racetrack Simulator\Racetrack Simulator.csproj", "{F1B4668D-D2A1-4CE4-9EBC-4F8FB9B6FED5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 5", "Chapter 5", "{9FAE03F9-C748-484C-95EC-BF89C0C858DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinnerPartyEstimator", "DinnerPartyEstimator\DinnerPartyEstimator.csproj", "{6094A0C1-9B71-43B8-8D50-6D98177E0713}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +90,10 @@ Global
 		{F1B4668D-D2A1-4CE4-9EBC-4F8FB9B6FED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1B4668D-D2A1-4CE4-9EBC-4F8FB9B6FED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1B4668D-D2A1-4CE4-9EBC-4F8FB9B6FED5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6094A0C1-9B71-43B8-8D50-6D98177E0713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6094A0C1-9B71-43B8-8D50-6D98177E0713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6094A0C1-9B71-43B8-8D50-6D98177E0713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6094A0C1-9B71-43B8-8D50-6D98177E0713}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +110,7 @@ Global
 		{16D56E66-9B1C-4517-923E-A95ABBA730AF} = {76803B98-FD00-4606-8C8D-A4C877FF450C}
 		{3156985F-20A1-47AB-B7D8-DD28C72866D7} = {76803B98-FD00-4606-8C8D-A4C877FF450C}
 		{F1B4668D-D2A1-4CE4-9EBC-4F8FB9B6FED5} = {76803B98-FD00-4606-8C8D-A4C877FF450C}
+		{6094A0C1-9B71-43B8-8D50-6D98177E0713} = {9FAE03F9-C748-484C-95EC-BF89C0C858DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D18CD73-B9D3-4E71-A650-66F4C1737077}
