@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PartyEstimator.Properties
+namespace HitTheKeys.Properties
 {
 
 
