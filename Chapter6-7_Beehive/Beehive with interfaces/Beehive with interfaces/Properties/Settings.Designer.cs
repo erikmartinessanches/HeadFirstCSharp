@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PartyEstimator.Properties
+namespace Beehive_with_interfaces.Properties
 {
 
 
