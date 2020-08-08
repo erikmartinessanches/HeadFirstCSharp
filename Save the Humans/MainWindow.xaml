@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Save_the_Humans"
         mc:Ignorable="d"
-        Title="Save the humans" Height="700" Width="1000">
+        Title="Save the humans. Drag humanoid to diamond-shaped exit before the progress bar runs out of time, avoiding aliens." Height="700" Width="1000" ResizeMode="NoResize">
     <Window.Resources>
         <ControlTemplate x:Key="EnemyTemplate" TargetType="{x:Type ContentControl}">
             <Grid>
@@ -62,7 +62,7 @@
                 <Rectangle Fill="White" Height="25" Stroke="Black" Width="10"/>
             </StackPanel>
             <Border x:Name="border" BorderBrush="{x:Null}" Height="522" Width="995">
-            <TextBlock x:Name="gameOverText" TextWrapping="Wrap" Text="Game over" FontSize="18" Foreground="White" MinWidth="100" MinHeight="50" VerticalAlignment="Center" UseLayoutRounding="False" Canvas.Left="471" Canvas.Top="304.5" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="gameOverText" TextWrapping="Wrap" Text="Game over (press start)" FontSize="18" Foreground="White" MinWidth="100" MinHeight="50" VerticalAlignment="Center" UseLayoutRounding="False" Canvas.Left="471" Canvas.Top="304.5" HorizontalAlignment="Center"/>
             </Border>
             <Rectangle x:Name="target" Height="50" Canvas.Left="220" Stroke="Black" Canvas.Top="109" Width="50" RenderTransformOrigin="0.5,0.5" MouseEnter="Target_MouseEnter">
                 <Rectangle.RenderTransform>
