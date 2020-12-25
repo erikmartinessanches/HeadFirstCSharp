@@ -13,13 +13,95 @@ namespace Comics
             IEnumerable<Comic> result =
                 from comic in Comic.Catalog
                 where Comic.Prices[comic.Issue] > 500
-                orderby -Comic.Prices[comic.Issue]
+                orderby Comic.Prices[comic.Issue] descending
                 select comic;
+            foreach (Comic c in result) Console.WriteLine($"{c} is worth {Comic.Prices[c.Issue]:c}");
 
-            foreach (Comic c in result)
+            int[] values = new int[] { 0, 12, 44, 36, 92, 54, 13, 8 };
+            IEnumerable<int> result2 = from v in values where v < 37 orderby v descending select v;
+            foreach (int i in result2) Console.WriteLine($"{i} ");
+
+            //Changing the select clause to an interpolated string makes the result of the query a 
+            //sequence of strings:
+            //IEnumerable<string> mostExpensiveComicDescriptions =
+            var mostExpensiveComicDescriptions =
+                from comic in Comic.Catalog
+                where Comic.Prices[comic.Issue] > 500
+                orderby Comic.Prices[comic.Issue] descending
+                select $"{comic} is worth {Comic.Prices[comic.Issue]:c}";
+            foreach (string comicDescription in mostExpensiveComicDescriptions) Console.WriteLine(comicDescription);
+
+
+            /** LINQ queries aren't tun until we access their results (deferred, lazy evaluation). */
+            var listOfObjects = new List<PrintWhenGetting>();
+            for (int i = 1; i < 5; i++)
             {
-                Console.WriteLine($"{c} is worth {Comic.Prices[c.Issue]:c}");
+                listOfObjects.Add(new PrintWhenGetting() { InstanceNumber = i });
             }
+            Console.WriteLine("Setting up the query.");
+            var result3 =
+                from o in listOfObjects
+                select o.InstanceNumber;
+
+            /**Notice how this line appears in the terminal BEFORE the get accessor executes. That's
+             * because the LINQ query is executed only once we reach the foreach loop.
+             */
+            Console.WriteLine("Run the foreach loop.");
+
+            foreach (var number in result3)
+            {
+                Console.WriteLine($"Writing #{number}");
+            }
+            /** The out put is
+            Setting up the query.
+            Run the foreach loop.
+            Getting instance number 1
+            Writing #1
+            Getting instance number 2
+            Writing #2
+            Getting instance number 3
+            Writing #3
+            Getting instance number 4
+            Writing #4
+            */
+
+            /** LINQ query can be made to execute immediatly by using a LINQ method that enumerates
+             * the collection, such as ToList, which turns it into a List<T>:
+             */
+            var immediate = result3.ToList();
+            Console.WriteLine("Run the foreach.");
+            foreach (var number in immediate) Console.WriteLine($"Writing #{number}");
+
+            /** This time the get accessors are called before the foreach loop, because ToList
+             * needs to access every element in the sequence to convert it into a list. (Similarly
+             * for methods like Sum, Min, Max.)
+             *
+             * The output is now
+             *  Getting instance number 1
+                Getting instance number 2
+                Getting instance number 3
+                Getting instance number 4
+                Run the foreach.
+                Writing #1
+                Writing #2
+                Writing #3
+                Writing #4 
+            */
+        }
+    }
+
+    class PrintWhenGetting
+    {
+        private int instanceNumber;
+
+        internal int InstanceNumber
+        {
+            get
+            {
+                Console.WriteLine($"Getting instance number {instanceNumber}");
+                return instanceNumber;
+            }
+            set => instanceNumber = value;
         }
     }
 }
