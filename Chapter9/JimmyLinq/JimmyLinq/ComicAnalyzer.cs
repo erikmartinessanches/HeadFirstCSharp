@@ -21,20 +21,14 @@ namespace JimmyLinq
 
         internal static IEnumerable<IGrouping<PriceRange, Comic>> GroupComicsByPrice(IEnumerable<Comic> comics, IReadOnlyDictionary<int, decimal> prices)
         {
-            IEnumerable<IGrouping<PriceRange, Comic>> grouped =
-                from comic in comics
+            var comicsResult =
+                from price in prices
+                join comic in comics
+                    on price.Key equals comic.Issue
                 orderby prices[comic.Issue]
-                group comic by CalculatePriceRange(comic) into priceGroup
-                select priceGroup;
-            return grouped;
-            //var comicsResult =
-            //    from price in prices
-            //    join comic in comics
-            //        on price.Key equals comic.Issue
-            //    orderby prices[comic.Issue]
-            //    group comic by CalculatePriceRange(comic) into comicGroup
-            //    select comicGroup;
-            //return comicsResult;
+                group comic by CalculatePriceRange(comic) into comicGroup
+                select comicGroup;
+            return comicsResult;
         }
 
         internal static IEnumerable<string> GetReviews(IEnumerable<Comic> catalog, IEnumerable<Review> reviews)

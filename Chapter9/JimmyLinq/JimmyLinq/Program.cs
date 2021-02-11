@@ -8,22 +8,20 @@ namespace JimmyLinq
     {
         static void Main(string[] args)
         {
-            static void Main(string[] args) {
-                var done = false;
-                while (!done) {
-                    Console.WriteLine(
-                        "\nPress G to group comics by price, R to get reviews, any other key to quit\n");
-                    switch (Console.ReadKey(true).KeyChar.ToString().ToUpper()) {
-                        case "G":
-                            done = GroupComicsByPrice();
-                            break;
-                        case "R":
-                            done = GetReviews();
-                            break;
-                        default:
-                            done = true;
-                            break;
-                    }
+            var done = false;
+            while (!done) {
+                Console.WriteLine(
+                    "\nPress G to group comics by price, R to get reviews, any other key to quit\n");
+                switch (Console.ReadKey(true).KeyChar.ToString().ToUpper()) {
+                    case "G":
+                        done = GroupComicsByPrice();
+                        break;
+                    case "R":
+                        done = GetReviews();
+                        break;
+                    default:
+                        done = true;
+                        break;
                 }
             }
         }
