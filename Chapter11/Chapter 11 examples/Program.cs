@@ -8,7 +8,7 @@ namespace Chapter_11_examples
         static void Main(string[] args)
         {
             var i = 1;
-            var guy = new Guy() { Name = "Joe", Age = 26 };
+            var guy = new Guy{ Age = 26, Name = "Joe"  };
             Console.WriteLine("i is {0} and guy is {1}", i, guy);
             ModifyAnIntAndGuy(ref i, ref guy);
             Console.WriteLine("Now i is {0} and guy is {1}", i, guy);
