@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30204.135
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33209.295
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Save the Humans", "Save the Humans\Save the Humans.csproj", "{35346F09-1D95-4FE3-871F-8EE0E2ECA4E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Save the Humans", "Save the Humans\Save the Humans.csproj", "{35346F09-1D95-4FE3-871F-8EE0E2ECA4E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2IfElsePractice", "Chapter2IfElsePractice\Chapter2IfElsePractice.csproj", "{CDCF7461-12BC-4166-936C-A8A460435398}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter2IfElsePractice", "Chapter2IfElsePractice\Chapter2IfElsePractice.csproj", "{CDCF7461-12BC-4166-936C-A8A460435398}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2_AnimatingWinFormsApps", "Chapter2_AnimatingWinFormsApps\Chapter2_AnimatingWinFormsApps.csproj", "{4794B69E-1B70-455E-A091-474D8061B87F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter2_AnimatingWinFormsApps", "Chapter2_AnimatingWinFormsApps\Chapter2_AnimatingWinFormsApps.csproj", "{4794B69E-1B70-455E-A091-474D8061B87F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3_example1", "Chapter3_example1\Chapter3_example1.csproj", "{AAFB9607-8FC9-44B6-BE09-3DCC8825E123}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter3_example1", "Chapter3_example1\Chapter3_example1.csproj", "{AAFB9607-8FC9-44B6-BE09-3DCC8825E123}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3_Guys", "Chapter3_Guys\Chapter3_Guys.csproj", "{A246AE16-25CD-4FBC-AD2C-FDFE91435F3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter3_Guys", "Chapter3_Guys\Chapter3_Guys.csproj", "{A246AE16-25CD-4FBC-AD2C-FDFE91435F3D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{819F4F5D-EFC7-433E-B06B-515FC1665ACC}"
 	ProjectSection(SolutionItems) = preProject
@@ -20,33 +20,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 4", "Chapter 4", "{76803B98-FD00-4606-8C8D-A4C877FF450C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastingExample", "CastingExample\CastingExample.csproj", "{BA077D6B-AFAF-49D6-935A-B552822BF380}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CastingExample", "CastingExample\CastingExample.csproj", "{BA077D6B-AFAF-49D6-935A-B552822BF380}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reimbursement calculator", "Reimbursement calculator\Reimbursement calculator.csproj", "{16D56E66-9B1C-4517-923E-A95ABBA730AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reimbursement calculator", "Reimbursement calculator\Reimbursement calculator.csproj", "{16D56E66-9B1C-4517-923E-A95ABBA730AF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 3", "Chapter 3", "{0181DAD4-781C-420A-A79C-79DDF6789B67}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 2", "Chapter 2", "{44B999C3-4635-477B-932D-1270FE8B9ECA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Racetrack Simulator", "Racetrack Simulator\Racetrack Simulator.csproj", "{F1B4668D-D2A1-4CE4-9EBC-4F8FB9B6FED5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Racetrack Simulator", "Racetrack Simulator\Racetrack Simulator.csproj", "{F1B4668D-D2A1-4CE4-9EBC-4F8FB9B6FED5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 5-6", "Chapter 5-6", "{9FAE03F9-C748-484C-95EC-BF89C0C858DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartyEstimator", "DinnerPartyEstimator\PartyEstimator.csproj", "{6094A0C1-9B71-43B8-8D50-6D98177E0713}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartyEstimator", "DinnerPartyEstimator\PartyEstimator.csproj", "{6094A0C1-9B71-43B8-8D50-6D98177E0713}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 7", "Chapter 7", "{86B55E3C-BD52-4C6A-A915-74DB50EF8B96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "House", "Chapter7_house\House\House.csproj", "{F423195F-0F50-4A5F-BFD3-5056EFDF1807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "House", "Chapter7_house\House\House.csproj", "{F423195F-0F50-4A5F-BFD3-5056EFDF1807}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 6-7 Beehive", "Chapter 6-7 Beehive", "{3250F341-5A61-4032-85B0-872E0F1ACC96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beehive", "Chapter6-7_Beehive\Beehive\Beehive.csproj", "{EDF3D5FE-534E-47BD-B583-2501D82400C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beehive", "Chapter6-7_Beehive\Beehive\Beehive.csproj", "{EDF3D5FE-534E-47BD-B583-2501D82400C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beehive with inheritance", "Chapter6-7_Beehive\Beehive with inheritance\Beehive with inheritance\Beehive with inheritance.csproj", "{A867F6F4-91E3-4051-9C40-DFC228C06CEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beehive with inheritance", "Chapter6-7_Beehive\Beehive with inheritance\Beehive with inheritance\Beehive with inheritance.csproj", "{A867F6F4-91E3-4051-9C40-DFC228C06CEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beehive with interfaces", "Chapter6-7_Beehive\Beehive with interfaces\Beehive with interfaces\Beehive with interfaces.csproj", "{4A94808F-DE46-4EE1-B15A-B78EFB90A9ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beehive with interfaces", "Chapter6-7_Beehive\Beehive with interfaces\Beehive with interfaces\Beehive with interfaces.csproj", "{4A94808F-DE46-4EE1-B15A-B78EFB90A9ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HitTheKeys", "Chapter4_HitTheKeys\HitTheKeys\HitTheKeys.csproj", "{10CC2A3D-DEBB-4381-8475-CB959FA9E322}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HitTheKeys", "Chapter4_HitTheKeys\HitTheKeys\HitTheKeys.csproj", "{10CC2A3D-DEBB-4381-8475-CB959FA9E322}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 9", "Chapter 9", "{4C619A79-F062-4927-8E0C-3FF0D6F041E8}"
 EndProject
@@ -72,9 +72,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutModifier", "Chapter11\Ou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter 11 examples", "Chapter11\Chapter 11 examples\Chapter 11 examples.csproj", "{80E14248-CD74-4191-80CB-BA6ABCAC5BF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtentionMethodsExample", "ExtentionMethodsExample\ExtentionMethodsExample.csproj", "{6D113721-B1DE-4A12-ABB1-F7014BF09F6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtentionMethodsExample", "ExtentionMethodsExample\ExtentionMethodsExample.csproj", "{6D113721-B1DE-4A12-ABB1-F7014BF09F6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendingAFundamentalType", "Chapter11\ExtendingAFundamentalType\ExtendingAFundamentalType.csproj", "{FC143F7C-77AD-402A-94E0-83724643DFCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtendingAFundamentalType", "Chapter11\ExtendingAFundamentalType\ExtendingAFundamentalType.csproj", "{FC143F7C-77AD-402A-94E0-83724643DFCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoes", "Chapter8\Shoes\Shoes\Shoes.csproj", "{3AA12ED5-359C-4138-AD8A-35D314A2C094}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -182,6 +184,10 @@ Global
 		{FC143F7C-77AD-402A-94E0-83724643DFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC143F7C-77AD-402A-94E0-83724643DFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC143F7C-77AD-402A-94E0-83724643DFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AA12ED5-359C-4138-AD8A-35D314A2C094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AA12ED5-359C-4138-AD8A-35D314A2C094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AA12ED5-359C-4138-AD8A-35D314A2C094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AA12ED5-359C-4138-AD8A-35D314A2C094}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -212,6 +218,7 @@ Global
 		{80E14248-CD74-4191-80CB-BA6ABCAC5BF6} = {A45B8408-B9B1-4415-8649-09C71A9AF95D}
 		{6D113721-B1DE-4A12-ABB1-F7014BF09F6B} = {A45B8408-B9B1-4415-8649-09C71A9AF95D}
 		{FC143F7C-77AD-402A-94E0-83724643DFCC} = {A45B8408-B9B1-4415-8649-09C71A9AF95D}
+		{3AA12ED5-359C-4138-AD8A-35D314A2C094} = {F7CA10CB-6BFE-43EE-A334-12E3BA38BFBC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D18CD73-B9D3-4E71-A650-66F4C1737077}

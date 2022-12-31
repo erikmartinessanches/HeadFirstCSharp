@@ -12,7 +12,7 @@ namespace EnumsAndCollections
             LongTrickScore myScore = LongTrickScore.Beg;
             Console.WriteLine((long)myScore); //Casts to the enum's underlying value.
 
-            //Exercise page 455:
+            //Exercise page 455, 4th ed:
             Card myCard = new Card(Values.Ace, Suits.Spades);
             Console.WriteLine(myCard.Name);
             Random random = new Random();
