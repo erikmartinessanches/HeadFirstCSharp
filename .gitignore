@@ -263,3 +263,6 @@ __pycache__/
 *.sarif
 *.clef
 Racetrack Simulator/.upgrade-assistant
+/.editorconfig
+/Chapter8/EnumsAndCollections/Properties/launchSettings.json
+/Chapter9/Comics/Comics/Properties/launchSettings.json

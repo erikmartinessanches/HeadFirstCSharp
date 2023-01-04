@@ -15,6 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter3_Guys", "Chapter3_G
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{819F4F5D-EFC7-433E-B06B-515FC1665ACC}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -76,7 +77,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtentionMethodsExample", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtendingAFundamentalType", "Chapter11\ExtendingAFundamentalType\ExtendingAFundamentalType.csproj", "{FC143F7C-77AD-402A-94E0-83724643DFCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoes", "Chapter8\Shoes\Shoes\Shoes.csproj", "{3AA12ED5-359C-4138-AD8A-35D314A2C094}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shoes", "Chapter8\Shoes\Shoes\Shoes.csproj", "{3AA12ED5-359C-4138-AD8A-35D314A2C094}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
