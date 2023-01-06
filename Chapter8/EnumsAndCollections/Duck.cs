@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Diagnostics.Contracts;
-using System.Text;
 
-namespace EnumsAndCollections {
+namespace ListOfDucks {
   internal class Duck : IComparable<Duck> {
     public int Size { get; set; }
     public KindOfDuck Kind { get; set; }

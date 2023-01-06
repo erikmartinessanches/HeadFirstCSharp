@@ -57,7 +57,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Comics", "Chapter9\Comics\C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 8", "Chapter 8", "{F7CA10CB-6BFE-43EE-A334-12E3BA38BFBC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumsAndCollections", "Chapter8\EnumsAndCollections\EnumsAndCollections.csproj", "{DF0BB941-29AE-40B1-8092-AD6A13175D5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListOfDucks", "Chapter8\EnumsAndCollections\ListOfDucks.csproj", "{DF0BB941-29AE-40B1-8092-AD6A13175D5B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardLinq", "Chapter9\CardLinq\CardLinq.csproj", "{6EE2C0D3-B71B-41A3-8F9E-0F692B4DA4F0}"
 EndProject
@@ -78,6 +78,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtendingAFundamentalType", "Chapter11\ExtendingAFundamentalType\ExtendingAFundamentalType.csproj", "{FC143F7C-77AD-402A-94E0-83724643DFCC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shoes", "Chapter8\Shoes\Shoes\Shoes.csproj", "{3AA12ED5-359C-4138-AD8A-35D314A2C094}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListOfCardsExercise", "Chapter8\ListOfCardsExercise\ListOfCardsExercise\ListOfCardsExercise.csproj", "{F5ECDC6E-342F-497C-8A14-527CDDF64F42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -189,6 +191,10 @@ Global
 		{3AA12ED5-359C-4138-AD8A-35D314A2C094}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AA12ED5-359C-4138-AD8A-35D314A2C094}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AA12ED5-359C-4138-AD8A-35D314A2C094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5ECDC6E-342F-497C-8A14-527CDDF64F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5ECDC6E-342F-497C-8A14-527CDDF64F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5ECDC6E-342F-497C-8A14-527CDDF64F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5ECDC6E-342F-497C-8A14-527CDDF64F42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -220,6 +226,7 @@ Global
 		{6D113721-B1DE-4A12-ABB1-F7014BF09F6B} = {A45B8408-B9B1-4415-8649-09C71A9AF95D}
 		{FC143F7C-77AD-402A-94E0-83724643DFCC} = {A45B8408-B9B1-4415-8649-09C71A9AF95D}
 		{3AA12ED5-359C-4138-AD8A-35D314A2C094} = {F7CA10CB-6BFE-43EE-A334-12E3BA38BFBC}
+		{F5ECDC6E-342F-497C-8A14-527CDDF64F42} = {F7CA10CB-6BFE-43EE-A334-12E3BA38BFBC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D18CD73-B9D3-4E71-A650-66F4C1737077}
