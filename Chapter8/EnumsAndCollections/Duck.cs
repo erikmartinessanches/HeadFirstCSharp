@@ -4,27 +4,27 @@ using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Contracts;
 using System.Text;
 
-namespace EnumsAndCollections
-{
-    class Duck : IComparable<Duck>
-    {
-        public int Size { get; set; }
-        public KindOfDuck Kind { get; set; }
-        public int CompareTo([AllowNull] Duck other)
-        {
-            if (this.Size > other.Size)
-                return 1;
-            else if (this.Size < other.Size)
-                return -1;
-            else
-                return 0;
-        }
-    }
+namespace EnumsAndCollections {
+  internal class Duck : IComparable<Duck> {
+    public int Size { get; set; }
+    public KindOfDuck Kind { get; set; }
 
-    enum KindOfDuck
-    {
-        Mallard,
-        Muscovy,
-        Loon
+    public int CompareTo([AllowNull] Duck other) {
+      if (Size > other.Size) {
+        return 1;
+      }
+      else if (Size < other.Size) {
+        return -1;
+      }
+      else {
+        return 0;
+      }
     }
+  }
+
+  internal enum KindOfDuck {
+    Mallard,
+    Muscovy,
+    Loon
+  }
 }
