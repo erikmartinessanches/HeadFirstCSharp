@@ -17,6 +17,10 @@ namespace ListOfDucks {
         return 0;
       }
     }
+
+    public override string ToString() {
+      return $"A {Size} inch {Kind}";
+    }
   }
 
   internal enum KindOfDuck {

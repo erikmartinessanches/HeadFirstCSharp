@@ -1,7 +1,8 @@
 ﻿namespace ListOfCardsExercise {
   internal class CardComparerByValue : IComparer<Card> {
     public int Compare(Card x, Card y) {
-      if (x.Suit < y.Suit) {
+      //Notice that we can compare enum values below without using casting (to int).
+      if (x.Suit < y.Suit) { //First order by suit.
         return -1;
       }
 
@@ -9,7 +10,7 @@
         return 1;
       }
 
-      if (x.Value < y.Value) {
+      if (x.Value < y.Value) { //The order by value.
         return -1;
       }
 
