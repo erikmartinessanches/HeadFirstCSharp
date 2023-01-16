@@ -23,6 +23,7 @@ namespace ListOfDucks {
       ducks.Sort();
       PrintDucks(ducks);
 
+      //p 478 4th ed
       DuckComparer comparer = new();
       Console.WriteLine(
         "Sorting ducks using Compare(Duck x, Duck, y) on DuckComparer : IComparer<Duck>");
@@ -34,11 +35,49 @@ namespace ListOfDucks {
       comparer.SortBy = SortCriteria.SizeThenKind;
       ducks.Sort(comparer);
       PrintDucks(ducks);
+
+      //p 476, 4th ed.
+      Console.WriteLine("Resetting the duck list to the original: ");
+      ducks = new List<Duck> {
+        new() { Kind = KindOfDuck.Mallard, Size = 17 },
+        new() { Kind = KindOfDuck.Muscovy, Size = 18 },
+        new() { Kind = KindOfDuck.Loon, Size = 14 },
+        new() { Kind = KindOfDuck.Muscovy, Size = 11 },
+        new() { Kind = KindOfDuck.Mallard, Size = 14 },
+        new() { Kind = KindOfDuck.Loon, Size = 13 }
+      };
+      PrintDucks(ducks);
+      Console.WriteLine(
+        "Now using DuckComparerBySize to make sure the ducks are sorted from smallest to largest");
+      DuckComparerBySize
+        sizeComparer = new(); //Creating an instance of the comparer object.
+      ducks.Sort(sizeComparer);
+      Console.WriteLine("Now the ducks should be sorted: ");
+      PrintDucks(ducks);
+
+      //p 477, 4th ed.
+      Console.WriteLine("Resetting the duck list to the original: ");
+      ducks = new List<Duck> {
+        new() { Kind = KindOfDuck.Mallard, Size = 17 },
+        new() { Kind = KindOfDuck.Muscovy, Size = 18 },
+        new() { Kind = KindOfDuck.Loon, Size = 14 },
+        new() { Kind = KindOfDuck.Muscovy, Size = 11 },
+        new() { Kind = KindOfDuck.Mallard, Size = 14 },
+        new() { Kind = KindOfDuck.Loon, Size = 13 }
+      };
+      PrintDucks(ducks);
+      Console.WriteLine(
+        "Now using DuckComparerByKind.");
+      DuckComparerByKind kindComparer = new();
+      ducks.Sort(kindComparer);
+      PrintDucks(ducks);
     }
 
+
+    //page 473, 4th ed. 
     public static void PrintDucks(List<Duck> ducks) {
       foreach (Duck duck in ducks) {
-        Console.WriteLine($"{duck.Size} inch {duck.Kind}");
+        Console.WriteLine(duck);
       }
     }
   }
