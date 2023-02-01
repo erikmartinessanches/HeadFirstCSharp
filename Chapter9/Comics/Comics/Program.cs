@@ -9,17 +9,18 @@ namespace Comics
     {
         static void Main(string[] args)
         {
-            //Exercise: Print a list of comics with a price > 500 in reverse order.
+            //Example p 535, 4th ed.
+            int[] values = new int[] { 0, 12, 44, 36, 92, 54, 13, 8 };
+            IEnumerable<int> result2 = from v in values where v < 37 orderby v descending select v;
+            foreach (int i in result2) Console.WriteLine($"{i} ");
+
+            //Exercise p 535, 4th ed: Print a list of comics with a price > 500 in reverse order.
             IEnumerable<Comic> result =
                 from comic in Comic.Catalog
                 where Comic.Prices[comic.Issue] > 500
                 orderby Comic.Prices[comic.Issue] descending
                 select comic;
             foreach (Comic c in result) Console.WriteLine($"{c} is worth {Comic.Prices[c.Issue]:c}");
-
-            int[] values = new int[] { 0, 12, 44, 36, 92, 54, 13, 8 };
-            IEnumerable<int> result2 = from v in values where v < 37 orderby v descending select v;
-            foreach (int i in result2) Console.WriteLine($"{i} ");
 
             //Changing the select clause to an interpolated string makes the result of the query a 
             //sequence of strings:

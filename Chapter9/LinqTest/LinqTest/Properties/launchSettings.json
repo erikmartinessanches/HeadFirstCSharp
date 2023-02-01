@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "LinqTest": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\Erik\\Documents\\GitHub\\HeadFirstCSharp\\Chapter9\\LinqTest\\LinqTest\\bin\\Debug\\net7.0\\LinqTest.exe"
+    }
+  }
+}
