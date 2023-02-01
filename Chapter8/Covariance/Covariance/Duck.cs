@@ -14,12 +14,12 @@ namespace EnumsAndCollections {
       if (Size > other.Size) {
         return 1;
       }
-      else if (Size < other.Size) {
+
+      if (Size < other.Size) {
         return -1;
       }
-      else {
-        return 0;
-      }
+
+      return 0;
     }
 
     public override string ToString() {
