@@ -4,7 +4,6 @@ using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
-/*mhm dfggdfgfd */
 namespace Comics {
   internal class Comic {
     public string Name { get; set; }
