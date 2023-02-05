@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace JimmyLinq
 {
-    internal static class ComicAnalyzer
+    public static class ComicAnalyzer
     {
-        internal static PriceRange CalculatePriceRange(Comic comic)
+         static PriceRange CalculatePriceRange(Comic comic)
         {
             if (Comic.Prices[comic.Issue] < 100)
             {
@@ -19,7 +19,7 @@ namespace JimmyLinq
             }
         }
 
-        internal static IEnumerable<IGrouping<PriceRange, Comic>> GroupComicsByPrice(IEnumerable<Comic> comics, IReadOnlyDictionary<int, decimal> prices)
+         static IEnumerable<IGrouping<PriceRange, Comic>> GroupComicsByPrice(IEnumerable<Comic> comics, IReadOnlyDictionary<int, decimal> prices)
         {
             var comicsResult =
                 from price in prices
@@ -31,7 +31,7 @@ namespace JimmyLinq
             return comicsResult;
         }
 
-        internal static IEnumerable<string> GetReviews(IEnumerable<Comic> catalog, IEnumerable<Review> reviews)
+        static IEnumerable<string> GetReviews(IEnumerable<Comic> catalog, IEnumerable<Review> reviews)
         {
             var temp = 
                 from comic in catalog

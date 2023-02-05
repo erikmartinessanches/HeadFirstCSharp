@@ -81,7 +81,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shoes", "Chapter8\Shoes\Sho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListOfCardsExercise", "Chapter8\ListOfCardsExercise\ListOfCardsExercise\ListOfCardsExercise.csproj", "{F5ECDC6E-342F-497C-8A14-527CDDF64F42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deferred Evaluation Example", "Chapter9\Deferred Evaluation Example\Deferred Evaluation Example\Deferred Evaluation Example.csproj", "{F56224B2-DC52-4EAE-AAB5-E4CC31C1F49E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deferred Evaluation Example", "Chapter9\Deferred Evaluation Example\Deferred Evaluation Example\Deferred Evaluation Example.csproj", "{F56224B2-DC52-4EAE-AAB5-E4CC31C1F49E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JimmyLinqUnitTests", "Chapter9\JimmyLinqUnitTests\JimmyLinqUnitTests\JimmyLinqUnitTests.csproj", "{DD587FDC-BC0A-486F-903A-EB08ACA95D1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -201,6 +203,10 @@ Global
 		{F56224B2-DC52-4EAE-AAB5-E4CC31C1F49E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F56224B2-DC52-4EAE-AAB5-E4CC31C1F49E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F56224B2-DC52-4EAE-AAB5-E4CC31C1F49E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD587FDC-BC0A-486F-903A-EB08ACA95D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD587FDC-BC0A-486F-903A-EB08ACA95D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD587FDC-BC0A-486F-903A-EB08ACA95D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD587FDC-BC0A-486F-903A-EB08ACA95D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

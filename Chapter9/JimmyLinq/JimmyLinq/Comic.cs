@@ -7,7 +7,7 @@ using JimmyLinq;
 
 namespace Comics
 {
-    class Comic
+    public class Comic
     {
         public string Name { get; set; }
         public int Issue { get; set; }

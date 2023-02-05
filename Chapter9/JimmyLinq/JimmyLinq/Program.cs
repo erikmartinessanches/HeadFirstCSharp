@@ -4,9 +4,9 @@ using Comics;
 
 namespace JimmyLinq
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var done = false;
             while (!done) {
@@ -26,7 +26,7 @@ namespace JimmyLinq
             }
         }
 
-        private static bool GroupComicsByPrice()
+        public static bool GroupComicsByPrice()
         {
             //The outer foreach loop prints info about each group,
             //the inner foreach enumerates the group.
@@ -42,7 +42,7 @@ namespace JimmyLinq
             return false;
         }
 
-        private static bool GetReviews()
+        public static bool GetReviews()
         {
             var reviews = ComicAnalyzer.GetReviews(Comic.Catalog, Comic.Reviews);
             foreach (var review in reviews)
