@@ -1,4 +1,4 @@
-﻿using Comics;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +7,9 @@ namespace JimmyLinq
 {
     public static class ComicAnalyzer
     {
-         static PriceRange CalculatePriceRange(Comic comic)
+         static PriceRange CalculatePriceRange(Comic comic, IReadOnlyDictionary<int, decimal> prices)
         {
-            if (Comic.Prices[comic.Issue] < 100)
+            if (prices[comic.Issue] < 100)
             {
                 return PriceRange.Cheap;
             }
@@ -26,7 +26,7 @@ namespace JimmyLinq
                 join comic in comics
                     on price.Key equals comic.Issue
                 orderby prices[comic.Issue]
-                group comic by CalculatePriceRange(comic) into comicGroup
+                group comic by CalculatePriceRange(comic, prices) into comicGroup
                 select comicGroup;
             return comicsResult;
         }
