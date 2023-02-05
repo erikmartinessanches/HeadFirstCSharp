@@ -19,7 +19,7 @@ namespace JimmyLinq
             }
         }
 
-         static IEnumerable<IGrouping<PriceRange, Comic>> GroupComicsByPrice(IEnumerable<Comic> comics, IReadOnlyDictionary<int, decimal> prices)
+         public static IEnumerable<IGrouping<PriceRange, Comic>> GroupComicsByPrice(IEnumerable<Comic> comics, IReadOnlyDictionary<int, decimal> prices)
         {
             var comicsResult =
                 from price in prices
@@ -31,7 +31,7 @@ namespace JimmyLinq
             return comicsResult;
         }
 
-        static IEnumerable<string> GetReviews(IEnumerable<Comic> catalog, IEnumerable<Review> reviews)
+        public static IEnumerable<string> GetReviews(IEnumerable<Comic> catalog, IEnumerable<Review> reviews)
         {
             var temp = 
                 from comic in catalog
