@@ -15,7 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter3_Guys", "Chapter3\C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{819F4F5D-EFC7-433E-B06B-515FC1665ACC}"
 	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
 		README.md = README.md
 	EndProjectSection
 EndProject
