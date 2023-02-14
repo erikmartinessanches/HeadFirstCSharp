@@ -83,7 +83,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListOfCardsExercise", "Chap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deferred Evaluation Example", "Chapter9\Deferred Evaluation Example\Deferred Evaluation Example\Deferred Evaluation Example.csproj", "{F56224B2-DC52-4EAE-AAB5-E4CC31C1F49E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JimmyLinqUnitTests", "Chapter9\JimmyLinqUnitTests\JimmyLinqUnitTests\JimmyLinqUnitTests.csproj", "{DD587FDC-BC0A-486F-903A-EB08ACA95D1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JimmyLinqUnitTests", "Chapter9\JimmyLinqUnitTests\JimmyLinqUnitTests\JimmyLinqUnitTests.csproj", "{DD587FDC-BC0A-486F-903A-EB08ACA95D1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -240,6 +240,7 @@ Global
 		{3AA12ED5-359C-4138-AD8A-35D314A2C094} = {F7CA10CB-6BFE-43EE-A334-12E3BA38BFBC}
 		{F5ECDC6E-342F-497C-8A14-527CDDF64F42} = {F7CA10CB-6BFE-43EE-A334-12E3BA38BFBC}
 		{F56224B2-DC52-4EAE-AAB5-E4CC31C1F49E} = {4C619A79-F062-4927-8E0C-3FF0D6F041E8}
+		{DD587FDC-BC0A-486F-903A-EB08ACA95D1F} = {4C619A79-F062-4927-8E0C-3FF0D6F041E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D18CD73-B9D3-4E71-A650-66F4C1737077}
