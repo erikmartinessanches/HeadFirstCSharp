@@ -16,6 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{819F4F5D-EFC7-433E-B06B-515FC1665ACC}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
+		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 4", "Chapter 4", "{76803B98-FD00-4606-8C8D-A4C877FF450C}"
@@ -88,7 +89,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumerable Sequence", "Chap
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 10", "Chapter 10", "{17A9F4DB-038C-4181-96DE-69E459BD8595}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swindler's diabolical plan", "Chapter 10\Swindler's diabolical plan\Swindler's diabolical plan.csproj", "{6DD06CE0-ACC3-408E-B032-90783C9A20A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swindler's diabolical plan", "Chapter 10\Swindler's diabolical plan\Swindler's diabolical plan.csproj", "{6DD06CE0-ACC3-408E-B032-90783C9A20A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SleuthItOutMemoryStream", "Chapter 10\SleuthItOutMemoryStream\SleuthItOutMemoryStream\SleuthItOutMemoryStream.csproj", "{EF475DD3-BC12-48E4-9CEC-3DB1B571AE85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -220,6 +223,10 @@ Global
 		{6DD06CE0-ACC3-408E-B032-90783C9A20A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DD06CE0-ACC3-408E-B032-90783C9A20A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DD06CE0-ACC3-408E-B032-90783C9A20A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF475DD3-BC12-48E4-9CEC-3DB1B571AE85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF475DD3-BC12-48E4-9CEC-3DB1B571AE85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF475DD3-BC12-48E4-9CEC-3DB1B571AE85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF475DD3-BC12-48E4-9CEC-3DB1B571AE85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -256,6 +263,7 @@ Global
 		{DD587FDC-BC0A-486F-903A-EB08ACA95D1F} = {4C619A79-F062-4927-8E0C-3FF0D6F041E8}
 		{DF6D8FAF-7768-4D87-A62A-7E7F4A1A0F83} = {4C619A79-F062-4927-8E0C-3FF0D6F041E8}
 		{6DD06CE0-ACC3-408E-B032-90783C9A20A2} = {17A9F4DB-038C-4181-96DE-69E459BD8595}
+		{EF475DD3-BC12-48E4-9CEC-3DB1B571AE85} = {17A9F4DB-038C-4181-96DE-69E459BD8595}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D18CD73-B9D3-4E71-A650-66F4C1737077}
