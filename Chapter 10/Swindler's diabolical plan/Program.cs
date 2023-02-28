@@ -29,7 +29,7 @@
             //Reading file.
             while (!reader.EndOfStream) {
                var lineFromThePlan = reader.ReadLine();
-               //We could optionally write this to anothe file using another writer here.
+               //We could optionally write this to another file using another writer here.
                Console.WriteLine(lineFromThePlan);
             }
             /*Chaining Streams, for example using a CryptoStream before a Filestream 
