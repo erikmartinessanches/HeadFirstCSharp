@@ -13,7 +13,8 @@ namespace Decks_of_cards {
          if (Resources["rightDeck"] is Deck rightDeck) {
             rightDeck.Clear();
          }
-         var temp = new Deck("tempfile.txt");
+         //var temp = new Deck("tempfile.txt");
+         //Console.WriteLine(temp.ToString());
       }
 
       private void MoveCard(bool leftToRight) {
