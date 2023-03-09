@@ -6,6 +6,7 @@ using System.IO;
 using System.Text.Json;
 
 namespace Decks_of_cards {
+
    class Deck : ObservableCollection<Card> {
       private static Random random = new Random();
 

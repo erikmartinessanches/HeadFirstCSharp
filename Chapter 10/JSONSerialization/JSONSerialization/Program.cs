@@ -17,6 +17,15 @@ namespace JSONSerialization {
          foreach (var guy in copyOfGuys) {
             Console.WriteLine($"This guy was deserialized: {guy}");
          }
+
+         //Deserialising JSON into a Stack of Dude objects.
+         var dudes = JsonSerializer.Deserialize<Stack<Dude>>(jsonString);
+         while (dudes.Count > 0) {
+            var dude = dudes.Pop();
+            Console.WriteLine($"The next dude: {dude.Name} with {dude.Hair}.");
+         }
+
+         Console.WriteLine("Unicode supports right-to-left languages, for example שלום");
       }
 
       class Guy {
@@ -37,6 +46,10 @@ namespace JSONSerialization {
          public HairColor Color { get; set; }
          public float Length { get; set; }
          public override string ToString() => $"{Length:0.0} inch {Color} hair";
+      }
+      class Dude {
+         public string Name { get; set; }
+         public HairStyle Hair { get; set; }
       }
    }
 }
