@@ -26,6 +26,9 @@ namespace JSONSerialization {
          }
 
          Console.WriteLine("Unicode supports right-to-left languages, for example שלום");
+
+         /*Declaring a nullable value type:*/
+         bool? optionalYesNoAnswer = null; //bool? is the same as Nullable<bool>. 
       }
 
       class Guy {

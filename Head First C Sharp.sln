@@ -93,7 +93,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swindler's diabolical plan"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SleuthItOutMemoryStream", "Chapter 10\SleuthItOutMemoryStream\SleuthItOutMemoryStream\SleuthItOutMemoryStream.csproj", "{EF475DD3-BC12-48E4-9CEC-3DB1B571AE85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONSerialization", "Chapter 10\JSONSerialization\JSONSerialization\JSONSerialization.csproj", "{9F664EBE-59CC-4463-A0D6-C00F04283D0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSONSerialization", "Chapter 10\JSONSerialization\JSONSerialization\JSONSerialization.csproj", "{9F664EBE-59CC-4463-A0D6-C00F04283D0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanExtensions", "Chapter11\HumanExtensions\HumanExtensions\HumanExtensions.csproj", "{0A7E684E-1B02-463C-A866-650719C986E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -233,6 +235,10 @@ Global
 		{9F664EBE-59CC-4463-A0D6-C00F04283D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F664EBE-59CC-4463-A0D6-C00F04283D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F664EBE-59CC-4463-A0D6-C00F04283D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A7E684E-1B02-463C-A866-650719C986E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A7E684E-1B02-463C-A866-650719C986E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A7E684E-1B02-463C-A866-650719C986E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A7E684E-1B02-463C-A866-650719C986E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -271,6 +277,7 @@ Global
 		{6DD06CE0-ACC3-408E-B032-90783C9A20A2} = {17A9F4DB-038C-4181-96DE-69E459BD8595}
 		{EF475DD3-BC12-48E4-9CEC-3DB1B571AE85} = {17A9F4DB-038C-4181-96DE-69E459BD8595}
 		{9F664EBE-59CC-4463-A0D6-C00F04283D0E} = {17A9F4DB-038C-4181-96DE-69E459BD8595}
+		{0A7E684E-1B02-463C-A866-650719C986E8} = {A45B8408-B9B1-4415-8649-09C71A9AF95D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D18CD73-B9D3-4E71-A650-66F4C1737077}
