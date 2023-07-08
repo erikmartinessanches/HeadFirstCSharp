@@ -67,16 +67,15 @@
       private int pitchNumber = 0;
       public Fan(Ball ball) => ball.BallInPlay += BallInPlayEventHandler;
 
-      private void BallInPlayEventHandler(object? sender, EventArgs e) {
+      private void BallInPlayEventHandler(object? sender, BallEventArgs e) {
          pitchNumber++;
-         if (e is BallEventArgs ballEventArgs) {
-            if ((ballEventArgs.Distance > 400) && (ballEventArgs.Angle > 30)) {
-               Console.WriteLine($"Fan #{pitchNumber}: Home run! I'm going for the ball!");
-            }
-            else {
-               Console.WriteLine($"Fan #{pitchNumber}: Yoo-hoo! Yeah!");
-            }
+         if ((e.Distance > 400) && (e.Angle > 30)) {
+            Console.WriteLine($"Fan #{pitchNumber}: Home run! I'm going for the ball!");
          }
+         else {
+            Console.WriteLine($"Fan #{pitchNumber}: Yoo-hoo! Yeah!");
+         }
+
       }
    }
 }
