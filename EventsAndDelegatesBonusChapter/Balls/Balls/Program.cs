@@ -1,9 +1,10 @@
 ﻿namespace Balls {
    internal class Program {
-      static readonly Ball ball = new Ball();
+      static readonly Ball ball = new();
       //Constructors chain their event handlers onto ball's BallInPlay event:
       static readonly Pitcher pitcher = new(ball);
       static readonly Fan fan = new(ball);
+
       static void Main(string[] args) {
          var running = true;
          while (running) {
@@ -12,6 +13,7 @@
                Console.WriteLine("Enter distance (number) or anything else to quit: ");
                if (int.TryParse(Console.ReadLine(), out int distance)) {
                   BallEventArgs ballEventArgs = new BallEventArgs(angle, distance);
+                  ball.OnBallInPlay(ballEventArgs);
                }
                else {
                   running = false;
@@ -36,7 +38,7 @@
    }
 
    class Ball {
-      public event EventHandler BallInPlay;
+      public event EventHandler? BallInPlay;
       public void OnBallInPlay(BallEventArgs e) => BallInPlay?.Invoke(this, e);
    }
 
@@ -60,9 +62,7 @@
 
    class Fan {
       private int pitchNumber = 0;
-      public Fan(Ball ball) {
-         ball.BallInPlay += BallInPlayEventHandler;
-      }
+      public Fan(Ball ball) => ball.BallInPlay += BallInPlayEventHandler;
 
       private void BallInPlayEventHandler(object? sender, EventArgs e) {
          pitchNumber++;
@@ -71,7 +71,7 @@
                Console.WriteLine($"Fan #{pitchNumber}: Home run! I'm going for the ball!");
             }
             else {
-               Console.WriteLine($"Fan #{pitchNumber}: Yoo-hoo! Yeah!.");
+               Console.WriteLine($"Fan #{pitchNumber}: Yoo-hoo! Yeah!");
             }
          }
       }
