@@ -16,7 +16,8 @@ namespace ExtentionMethodsExample {
        * in the extension method's first parameter. The extension method will be
        * added to every class that implements the interface. (This is what LINQ
        * is based on, all of the LINQ methods are static extension methods for the
-       * IEnumerable<T> interface.) 
+       * IEnumerable<T> interface.) Extension methods to not have access to class
+       * internals and act as outsiders.
        */
 
    }
