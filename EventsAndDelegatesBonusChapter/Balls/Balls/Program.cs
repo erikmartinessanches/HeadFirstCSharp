@@ -38,25 +38,28 @@
    }
 
    class Ball {
-      public event EventHandler? BallInPlay;
+      //Generic argument must subclass EventArgs:
+      public event EventHandler<BallEventArgs>? BallInPlay;
       public void OnBallInPlay(BallEventArgs e) => BallInPlay?.Invoke(this, e);
    }
 
    class Pitcher {
       public Pitcher(Ball ball) => ball.BallInPlay += BallInPlayEventHandler;
       private int pitchNumber = 0;
-      private void BallInPlayEventHandler(object? sender, EventArgs e) {
+      private void BallInPlayEventHandler(object? sender, BallEventArgs e) {
          pitchNumber++;
          /*Inside the if statement, we're able to downcast ballEventArgs to type
-          BallEventArgs, since BallEventArgs subclasses EventArgs.*/
-         if (e is BallEventArgs ballEventArgs) {
-            if ((ballEventArgs.Distance < 95) && (ballEventArgs.Angle < 60)) {
-               Console.WriteLine($"Pitch #{pitchNumber}: I caught the ball.");
-            }
-            else {
-               Console.WriteLine($"Pitch #{pitchNumber}: I covered first base.");
-            }
+          BallEventArgs, since BallEventArgs subclasses EventArgs. However, if we
+         since we passed <BallEventArgs> as the generic param to EventHandler in 
+         Ball, this event handler here will always receive EventArgs of type 
+         BallEventArgs, so no need to downcast in here. */
+         if ((e.Distance < 95) && (e.Angle < 60)) {
+            Console.WriteLine($"Pitch #{pitchNumber}: I caught the ball.");
          }
+         else {
+            Console.WriteLine($"Pitch #{pitchNumber}: I covered first base.");
+         }
+
       }
    }
 
