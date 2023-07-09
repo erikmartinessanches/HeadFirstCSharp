@@ -1,4 +1,20 @@
-﻿namespace Balls {
+﻿/**EVENTS, DELEGATES AND CALLBACKS SUMMARY
+ * Delegates is C#'s way of passing references to amethod between objects.
+ * 
+ *  Events and delegates are part of C# .NET. When an object publishes an event, 
+any number of other objects can subscribe to it without the publisher knowing or 
+caring. When an event is fired, all subscribers are notified (by calling their 
+event handlers). 
+
+ Callbacks are just a name for the way we use delegates (a pattern). A callback
+is where one object requests that it be notified by another object. The method
+doing the calling of a callback knows and may care about  which method it is 
+calling.
+
+ Both callbakcs and events use delegates to reference and call methods in other
+objects. */
+
+namespace Balls {
    internal class Program {
       static readonly Ball ball = new();
       //Constructors chain their event handlers onto ball's BallInPlay event:
@@ -13,7 +29,8 @@
                Console.WriteLine("Enter distance (number) or anything else to quit: ");
                if (int.TryParse(Console.ReadLine(), out int distance)) {
                   BallEventArgs ballEventArgs = new BallEventArgs(angle, distance);
-                  ball.OnBallInPlay(ballEventArgs);
+                  var bat = ball.GetNewBat();
+                  bat.HitTheBall(ballEventArgs);
                }
                else {
                   running = false;
@@ -40,7 +57,8 @@
    class Ball {
       //Generic argument must subclass EventArgs:
       public event EventHandler<BallEventArgs>? BallInPlay;
-      public void OnBallInPlay(BallEventArgs e) => BallInPlay?.Invoke(this, e);
+      protected void OnBallInPlay(BallEventArgs e) => BallInPlay?.Invoke(this, e);
+      public Bat GetNewBat() => new Bat(new BatCallback(OnBallInPlay));
    }
 
    class Pitcher {
@@ -75,7 +93,24 @@
          else {
             Console.WriteLine($"Fan #{pitchNumber}: Yoo-hoo! Yeah!");
          }
-
       }
+   }
+
+   /*Callback example follows. With callbacks, the object doing the calling is 
+    in control of who is listening. Other objects simply give their delegates and
+   ask to be notified. (In contrast, with events, other object demand to be 
+   notified by adding event handlers.) */
+
+   //We define the type of callback. When adding a delegate, we create a new type
+   //that stores references to methods. 
+   delegate void BatCallback(BallEventArgs e);
+
+   class Bat {
+      private BatCallback hitBallCallback; //A property holding a callback
+      //We get the function to call from outside and store it in a prop.
+      public Bat(BatCallback callbackDelegate) =>
+         this.hitBallCallback = callbackDelegate;
+      //We invoke hitBallCallback when HitTHeBall is run.
+      public void HitTheBall(BallEventArgs e) => hitBallCallback?.Invoke(e);
    }
 }
