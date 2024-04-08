@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33209.295
@@ -107,7 +107,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesChefExample", "Eve
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAppDelegate", "EventsAndDelegatesBonusChapter\SimpleAppDelegate\SimpleAppDelegate\SimpleAppDelegate.csproj", "{9620EF57-26A9-438E-8CA0-3FDFE54A36D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploreFuncAndAction", "EventsAndDelegatesBonusChapter\ExploreFuncAndAction\ExploreFuncAndAction\ExploreFuncAndAction.csproj", "{A1D06A69-4EA0-4401-89FF-6CDBBDFE63AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExploreFuncAndAction", "EventsAndDelegatesBonusChapter\ExploreFuncAndAction\ExploreFuncAndAction\ExploreFuncAndAction.csproj", "{A1D06A69-4EA0-4401-89FF-6CDBBDFE63AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
